@@ -1,0 +1,15 @@
+
+4. How can you remove duplicates from a table(distinct and other way)
+
+          SELECT  distinct(column) from tablename ; 
+          
+---------------------------------------------------------------------------------------------------
+
+          SELECT  column, COUNT(column)  FROM tablename GROUP BY  column  
+          HAVING  COUNT (column)> 1;  
+          
+---------------------------------------------------------------------------------------------------
+          
+          SELECT column1,column2, ROW_NUMBER()   
+          OVER (PARTITION BY column1 ORDER BY column1) 
+          AS row_num FROM tablename;
