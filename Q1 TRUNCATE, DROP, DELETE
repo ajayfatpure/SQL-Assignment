@@ -1,15 +1,20 @@
 1. What is the difference between truncate, delete, drop?
 
-DELETE command 
-    Data Manipulation Language Command.
-    Deletes one or more existing records from the table in the database.
-    The DELETE command does not free the allocated space of the table from memory.
-    DELETE FROM table_name WHERE condition;
+DELETE command :
+Delete command is a Data Manipulation Language Command which Deletes one or more existing records
+from the table in the database depending on the condition of the query.The DELETE command does not
+free the allocated space of the table from memory that means after the execution of the delete command
+the memory associated will not be free. Delete by default is not auto-committed, which means it can't
+permanently save all the changes in the database. They can be rolled back.
+
+
+here is the syntax for delete command 
+                DELETE FROM table_name WHERE condition;
 
 DROP Command
-    Data Definition Language Command.
-    drops the complete table from the database.
-    The DROP command removes the space allocated for the table from memory.
+Drop command is the Data Definition Language Command which drops the complete table from the database.
+You see this command affect to the whole structure of the table rather than certain section of it.
+as far as the memory is concern, The DROP command removes the space allocated for the table from memory.
     DROP TABLE table_name.
     
     
